@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mouse Pointer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div style="text-align: center; ">
+        <form style="display:inline;" action="{{ url_for('HAND')}}">
+            <input class="btn" type="submit" value="Basic Hand Detection">
+        </form>
+        <form style="display:inline;" action="{{ url_for('COUNTER')}}">
+            <input class="btn" type="submit" value="Finger Counter">
+        </form>
+        <form style="display:inline;" action="{{ url_for('PAINTER')}}">
+            <input class="btn" type="submit" value="Virtual Painter">
+        </form>
+        <form style="display:inline;" action="{{ url_for('MOUSE')}}">
+            <input class="btn" type="submit" value="Mouse Pointer">
+        </form>
+        <form style="display:inline;" action="{{ url_for('VOLUME')}}">
+            <input class="btn" type="submit" value="Volume Controller">
+        </form>
+        <form style="display:inline;" action="{{ url_for('HOME')}}">
+            <input class="btn" type="submit" value="My Old DE Project">
+        </form>
+    </div>
+    <br>
+
+
+    <div class="container">
+        <br>
+
+        <h1>OpenCV Mouse Pointer System</h1>
+        <h2>Live Camera Feed</h2>
+
+        <div>
+            <img style="border-radius: 5%; border: 5px solid black; width:60%; height:auto;  aspect-ratio:16/9;" class="img1" src="{{ url_for('video_feed3') }}">
+        </div>
+        <br><br>
+    </div>
+</body>
+
+</html>
